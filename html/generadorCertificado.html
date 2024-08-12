@@ -14,8 +14,8 @@
     <input type="text" placeholder="Escribeme" id="esc"><br><br>
 
     <a href="javascript:genPDF()">Crear pdf</a>
-    <script type="text/javascript" src="jspdf.min.js"></script>
-    <script type="text/javascript">
+    <script src="generadorCertificado.js"></script>
+    <script src="geneeradorCertificado.js">
         function genPDF(){
             var doc=new jsPDF();
             let mensaje=document.getElementById('esc').value;
