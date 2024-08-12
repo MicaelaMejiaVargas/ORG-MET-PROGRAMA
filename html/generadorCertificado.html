@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FELICITACIONES</title>
+
+</head>
+<body>
+    <h1>Crear Archivos PDF</h1>
+    <br>
+    
+    <input type="text" placeholder="Escribeme" id="esc"><br><br>
+
+    <a href="javascript:genPDF()">Crear pdf</a>
+    <script type="text/javascript" src="jspdf.min.js"></script>
+    <script type="text/javascript">
+        function genPDF(){
+            var doc=new jsPDF();
+            let mensaje=document.getElementById('esc').value;
+            doc.text(20,20,mensaje);
+            doc.addPage();
+            doc.text(20,20,'Mi trabajo!!');
+            doc.save('Test.pdf');
+        }
+    </script>
+</body>
+</html>
