@@ -8,22 +8,11 @@
 
 </head>
 <body>
-    <h1>Crear Archivos PDF</h1>
-    <br>
-    
-    <input type="text" placeholder="Escribeme" id="esc"><br><br>
-
-    <a href="javascript:genPDF()">Crear pdf</a>
-    <script src="generadorCertificado.js"></script>
-    <script src="geneeradorCertificado.js">
-        function genPDF(){
-            var doc=new jsPDF();
-            let mensaje=document.getElementById('esc').value;
-            doc.text(20,20,mensaje);
-            doc.addPage();
-            doc.text(20,20,'Mi trabajo!!');
-            doc.save('Test.pdf');
-        }
-    </script>
+    <p class="h1">CERTIFICADO</p>
+    <figure class="figure">
+        <img src="../img/logo_tec4.png" class="figure-img img-fluid rounded" alt="...">
+        <figcaption class="figure-caption">A caption for the above image.</figcaption>
+      </figure>
+      
 </body>
 </html>
