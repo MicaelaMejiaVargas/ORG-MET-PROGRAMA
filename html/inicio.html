@@ -10,53 +10,30 @@
 <body>
     <nav class="navbar text-bg-primary p-3">
         <div class="container-fluid">
-          <a class="navbar-brand" href="inicio.html">
-            <img id="navColor" src="../img/movistar_logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top ">
+          <a id="navColor" class="navbar-brand" href="inicio.html">
+            <img src="../img/movistar_logo.png" alt="Logo" width="36" height="27" class="d-inline-block">
             Capacitación Online - Movistar S.A
           </a>
         </div>
     </nav>
-    <div id="carouselExampleFade" class="carousel slide carousel-fade w-50 p-3">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../img/programador.png" class="d-block w-100">
-          </div>
-          <div class="carousel-item">
-            <img src="../img/secretaria.png" class="d-block w-100">
-          </div>
-          <div class="carousel-item">
-            <img src="../img/supervisor.png" class="d-block w-100">
-        </div>
-        
-        </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
+    <img id="imagenInicio" src="../img/programador.png" class="img-fluid">
 
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-
-    <section>
-        <div class="card" style="width: 18rem; margin: 0 auto; padding: 15px;">
-            <h5 class="card-title">Ingrese nombre y apellido para iniciar</h5> <br>
-            <input id="nameUser" type="text" class="inputs" placeholder="Nombre"> <br>
-            <input id="nameSurname" type="text" class="inputs" placeholder="Apellido"> <br>
+    <div>
+        <div id="formularioInicio" class="card" style="width: 45rem; margin: 20px; padding: 20px;">
+            <h5 class="card-title">Ingrese sus datos para ingresar</h5> <br>
+            <input id="nameUser" type="text" class="inputs" placeholder="Ingrese su nombre..."> <br>
+            <input id="nameSurname" type="text" class="inputs" placeholder="Ingrese su apellido..."> <br>
             <a id="btnEnviar" href="#" class="btn btn-primary">Enviar</a>
         </div>
-    </section>
+    </div>
 
-    <!-- ESTOS BOTONES SE ACTIVARAN CUANDO EL USUARIO LLENE EL FORMULARIO
+     ESTOS BOTONES SE ACTIVARAN CUANDO EL USUARIO LLENE EL FORMULARIO
     <section class="d-grid gap-2 d-md-block">
         <a href="#"><div type="button" class="btn btn-outline-primary">Atención al Cliente</div></a>
         <a href="#"><div type="button" class="btn btn-outline-primary">Estrategia y Desarrollo</div></a>
         <a href="#"><div type="button" class="btn btn-outline-primary">Finanzas y Control</div></a>
         <a href="#"><div type="button" class="btn btn-outline-primary">Asuntos Corporativos</div></a>
-    </section> -->
+    </section>
 
     <script src="/javascript/script.js"></script>
 </body>

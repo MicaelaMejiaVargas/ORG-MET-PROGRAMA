@@ -1,3 +1,19 @@
 #navColor {
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 2px;
+}
+
+#imagenInicio{
+    font-size: 25px;
+}
+
+#imagenInicio{
+    position:static;
+}
+
+#formularioInicio{
+    position:static;
 }
