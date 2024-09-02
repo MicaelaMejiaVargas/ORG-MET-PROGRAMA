@@ -21,7 +21,9 @@
 font-size: 20px;
 }
 .inputs{
-
+    width: 100%;
 }
-
+.aac{
+    text-align: center;
+}
 
