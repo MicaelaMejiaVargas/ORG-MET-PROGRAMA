@@ -42,10 +42,11 @@
     </head>
     <body>
         <div class="container">
-            <h1 class="text-center">Verificación de Frase</h1>
+            <h1 class="text-center">TEST OBLIGATORIO</h1>
+            <p class="text-center">LAS FRASES NO LLEVAN SIMBOLOS ESPECIALES NI ACENTOS</p>
             <form id="phraseForm">
                 <div class="form-group">
-                    <label for="inputPhrase">Escribe la frase:</label>
+                    <label for="inputPhrase">Escribe la frase: "yo solo se que no se nada frase escrita por un sabio filosofo"</label>
                     <input type="text" class="form-control" id="inputPhrase" placeholder="Escribe aquí...">
                     <small id="feedback" class="form-text feedback"></small>
                 </div>
@@ -63,12 +64,15 @@
             document.getElementById('phraseForm').addEventListener('submit', function(event) {
                 event.preventDefault();
     
-                const correctPhrase = 'Esta es la frase correcta';
+                const correctPhrase = 'yo solo se que no se nada frase escrita por un sabio filosofo';
+                const correctPhraseUno = 'YO SOLO SE QUE NO SE NADA FRASE ESCRITA POR UN SABIO FILOSOFO';
+                const correctPhraseDos = 'Yo solo se que no se nada frase escrita por un sabio filosofo';
+
                 const inputPhrase = document.getElementById('inputPhrase').value.trim();
                 const feedback = document.getElementById('feedback');
                 const inputField = document.getElementById('inputPhrase');
     
-                if (inputPhrase === correctPhrase) {
+                if (inputPhrase === correctPhrase || inputPhrase === correctPhraseUno || inputPhrase === correctPhraseDos) {
                     feedback.textContent = '¡Correcto!';
                     feedback.className = 'form-text feedback correct';
                     inputField.disabled = true;

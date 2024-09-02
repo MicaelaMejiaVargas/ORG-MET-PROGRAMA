@@ -23,7 +23,7 @@ font-size: 20px;
 .inputs{
     width: 100%;
 }
-.aac{
+.aac, .acx{
     text-align: center;
 }
 .caja{
@@ -35,5 +35,5 @@ font-size: 20px;
     margin-left: 10px;
 }
 .preguntas:hover{
-    font-size:20px;
+    font-size:25px;
 }
