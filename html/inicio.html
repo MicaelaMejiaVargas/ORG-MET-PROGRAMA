@@ -5,35 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
     <link rel="stylesheet" href="../css/general.css">
-    <title>Movistar S.A</title>
+    <title>CASOMI S.A</title>
 </head>
 <body>
-    <nav class="navbar text-bg-primary p-3">
+    <nav class="p-3"  id="primerNav">
         <div class="container-fluid">
           <a id="navColor" class="navbar-brand" href="inicio.html">
-            <img src="../img/empresa_logo.png" alt="Logo" width="36" height="27" class="d-inline-block">
+            <img src="../img/empresa_logo.png" alt="Logo" width="45" height="35" class="d-inline-block">
             Capacitación Online - CASOMI S.A
           </a>
         </div>
     </nav>
-    <img id="imagenInicio" src="../img/programador.png" class="img-fluid">
 
-    <div>
-        <div id="formularioInicio" class="card" style="width: 45rem; margin: 20px; padding: 20px;">
-            <h5 class="card-title">Ingrese sus datos para ingresar</h5> <br>
-            <input id="nameUser" type="text" class="inputs" placeholder="Ingrese su nombre..."> <br>
-            <input id="nameSurname" type="text" class="inputs" placeholder="Ingrese su apellido..."> <br>
-            <a id="btnEnviar" href="#" class="btn btn-primary">Enviar</a>
+    <div id="formularioInicio"  class="card border-primary mb-3" style="max-width: 40rem; margin: auto; margin-top: 90px;">
+        <div id="parrafoForm" class="card-header">¡Bienvenido a la capacitación online!</div>
+        <div class="card-body">
+          <input id="nameUser" type="text" class="inputs" placeholder="Ingrese su nombre..."><br><br>
+          <input id="nameSurname" type="text" class="inputs" placeholder="Ingrese su apellido..."><br><br>
+          <input id="nameSurname" type="text" class="inputs" placeholder="Ingrese su DNI..."><br><br>
+          <p class="card-text">(Los datos requeridos son para la realización del certificado)</p>
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button">Enviar</button>
         </div>
     </div>
-
+<!-- 
      ESTOS BOTONES SE ACTIVARAN CUANDO EL USUARIO LLENE EL FORMULARIO
     <section class="d-grid gap-2 d-md-block">
         <a href="atencionalcliente.html"><div type="button" class="btn btn-outline-primary">Atención al Cliente</div></a>
         <a href="estrategiaydesarrollo.html"><div type="button" class="btn btn-outline-primary">Estrategia y Desarrollo</div></a>
         <a href="financiasycontrol.html"><div type="button" class="btn btn-outline-primary">Finanzas y Control</div></a>
         <a href="asuntoscorporativos.html"><div type="button" class="btn btn-outline-primary">Asuntos Corporativos</div></a>
-    </section>
+    </section> -->
 
     <script src="/javascript/script.js"></script>
 </body>

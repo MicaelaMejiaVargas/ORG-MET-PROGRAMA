@@ -5,6 +5,11 @@
     font-size: 22px;
     padding: 2px;
 }
+#parrafoForm{
+    font-size: 28px;}
+#primerNav{
+    background-color: black;
+}
 
 #imagenInicio{
     font-size: 25px;
@@ -13,7 +18,8 @@
 #imagenInicio{
     position:static;
 }
-
-#formularioInicio{
-    position:static;
+#parrafoForm{
+font-size: 20px;
 }
+
+
