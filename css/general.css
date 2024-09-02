@@ -26,4 +26,8 @@ font-size: 20px;
 .aac{
     text-align: center;
 }
-
+.caja{
+    width: 520px;
+    height: 100px; 
+    margin-left: 20px;
+}
