@@ -37,9 +37,3 @@ font-size: 20px;
 .preguntas:hover{
     font-size:25px;
 }
-#footer{
-    height: auto;
-    width: auto;
-    color: white;
-    background-color: black;
-}
