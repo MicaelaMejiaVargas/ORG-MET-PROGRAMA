@@ -17,7 +17,73 @@
 </head>
 <body>
     <a href="eleccionRubro.html">Complete el test obligatorio</a>
-   
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Verificación de Frase</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .container {
+                margin-top: 50px;
+            }
+            .feedback {
+                display: none;
+            }
+            .correct {
+                color: green;
+            }
+            .incorrect {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center">Verificación de Frase</h1>
+            <form id="phraseForm">
+                <div class="form-group">
+                    <label for="inputPhrase">Escribe la frase:</label>
+                    <input type="text" class="form-control" id="inputPhrase" placeholder="Escribe aquí...">
+                    <small id="feedback" class="form-text feedback"></small>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+        <!-- Custom JS -->
+        <script>
+            document.getElementById('phraseForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                const correctPhrase = 'Esta es la frase correcta';
+                const inputPhrase = document.getElementById('inputPhrase').value.trim();
+                const feedback = document.getElementById('feedback');
+                const inputField = document.getElementById('inputPhrase');
+    
+                if (inputPhrase === correctPhrase) {
+                    feedback.textContent = '¡Correcto!';
+                    feedback.className = 'form-text feedback correct';
+                    inputField.disabled = true;
+                } else {
+                    feedback.textContent = 'Incorrecto, inténtalo de nuevo.';
+                    feedback.className = 'form-text feedback incorrect';
+                    inputField.disabled = true;
+                }
+    
+                feedback.style.display = 'block';
+            });
+        </script>
+    </body>
+    </html>
+<!--     
     <div class="container">
         <h1 class="text-center form-heading">Formulario de Salud</h1>
         <form>
@@ -60,12 +126,11 @@
         </form>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    Bootstrap JS and dependencies    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html>
+</html>  -->
 
 </body>
 </html>

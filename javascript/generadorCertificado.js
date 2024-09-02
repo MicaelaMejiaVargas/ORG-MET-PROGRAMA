@@ -1,2 +1,4 @@
 cosnt btn = document.getElementsByTagName("button");
-btn.addEventListener
+btn.addEventListener("click",(
+    
+));
