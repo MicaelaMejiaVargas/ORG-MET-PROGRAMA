@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
-        const dni = document.getElementById('dni').value;
+        const name = document.getElementById('dni').value;
         const nombre = document.getElementById('nombre').value;
         const apellido = document.getElementById('apellido').value;
         const telefono = document.getElementById('telefono').value;
