@@ -5,8 +5,7 @@
     font-size: 22px;
     padding: 2px;
 }
-#parrafoForm{
-    font-size: 28px;}
+#parrafoForm{font-size: 28px;}
 #primerNav{
     background-color: black;
 }
@@ -20,6 +19,9 @@
 }
 #parrafoForm{
 font-size: 20px;
+}
+.inputs{
+
 }
 
 
