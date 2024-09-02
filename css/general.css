@@ -23,7 +23,7 @@ font-size: 20px;
 .inputs{
     width: 100%;
 }
-.aac, .acx, .siguiente{
+.aac, .acx, #siguiente{
     text-align: center;
 }
 .caja{
