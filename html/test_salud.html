@@ -22,7 +22,7 @@
             <form id="phraseForm">
                 <div class="form-group">
                     <label for="inputPhrase">Escribe la frase: "yo solo se que no se nada frase escrita por un sabio filosofo"</label>
-                    <input type="text" class="form-control" id="inputPhrase" placeholder="Escribe aquí...">
+                    <input type="text" class="form-control" id="inputPhrase" placeholder="Escribe aquí..."><br>
                     <small id="feedback" class="form-text feedback"></small>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
@@ -33,32 +33,6 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-        <!-- Custom JS -->
-        <script>
-            document.getElementById('phraseForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-    
-                const correctPhrase = 'yo solo se que no se nada frase escrita por un sabio filosofo';
-                const correctPhraseUno = 'YO SOLO SE QUE NO SE NADA FRASE ESCRITA POR UN SABIO FILOSOFO';
-                const correctPhraseDos = 'Yo solo se que no se nada frase escrita por un sabio filosofo';
-
-                const inputPhrase = document.getElementById('inputPhrase').value.trim();
-                const feedback = document.getElementById('feedback');
-                const inputField = document.getElementById('inputPhrase');
-    
-                if (inputPhrase === correctPhrase || inputPhrase === correctPhraseUno || inputPhrase === correctPhraseDos) {
-                    feedback.textContent = '¡Correcto! Lo escribiste bien';
-                    feedback.className = 'form-text feedback correct';
-                    inputField.disabled = true;
-                } else {
-                    feedback.textContent = 'Incorrecto, inténtalo de nuevo.';
-                    feedback.className = 'form-text feedback incorrect';
-                    inputField.disabled = true;
-                }
-    
-                feedback.style.display = 'block';
-            });
-        </script>
+        <script src="../javascript/test_salud.js"></script>
     </body>
 </html>
