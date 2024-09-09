@@ -16,6 +16,7 @@ form.addEventListener('submit', async function(event) {
         
         if (response.ok) {
             // alert('Formulario enviado con éxito');
+            localStorage.setItem('nombreUsuario', data.nombre);
             form.reset();
             window.location.href = './pages/test_salud.html';
         } else {

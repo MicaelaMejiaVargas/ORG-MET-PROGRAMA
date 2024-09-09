@@ -22,6 +22,9 @@ document.getElementById('phraseForm').addEventListener('submit', function(event)
     feedback.style.display = 'block';
 });
 
-async function traerNombre(){
-    
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const nombreUsuario = localStorage.getItem('nombreUsuario');
+    if (nombreUsuario) {
+        document.getElementById('nombreUsuario').textContent = nombreUsuario;
+    }
+});
