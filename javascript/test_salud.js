@@ -54,7 +54,7 @@ function startCountdown() {
 submitButton.addEventListener('click', () => {
     const userInput = inputElement.value;
     const correctPhrase = phrases[currentPhraseIndex];
-    submitButton.
+    submitButton
 
     if (userInput === correctPhrase) {
         messageElement.textContent = '¡Correcto!';
