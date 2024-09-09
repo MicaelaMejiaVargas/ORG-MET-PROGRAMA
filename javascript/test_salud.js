@@ -8,7 +8,7 @@ const phrases = [
 let currentPhraseIndex = 0;
 let fontSize = 10;
 let timer;
-const countdownTime = 15; // Tiempo en segundos para el temporizador
+const countdownTime = 10; // Tiempo en segundos para el temporizador
 
 const phraseElement = document.getElementById('phrase');
 const inputElement = document.getElementById('input');
@@ -54,7 +54,8 @@ function startCountdown() {
 submitButton.addEventListener('click', () => {
     const userInput = inputElement.value;
     const correctPhrase = phrases[currentPhraseIndex];
-    
+    submitButton.
+
     if (userInput === correctPhrase) {
         messageElement.textContent = '¡Correcto!';
         messageElement.style.color = 'green';
@@ -65,6 +66,7 @@ submitButton.addEventListener('click', () => {
 
     // Inicia el temporizador para cambiar a la siguiente frase
     startCountdown();
+
 });
 
 displayPhrase();
