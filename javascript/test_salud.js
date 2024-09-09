@@ -21,3 +21,7 @@ document.getElementById('phraseForm').addEventListener('submit', function(event)
 
     feedback.style.display = 'block';
 });
+
+async function traerNombre(){
+    
+}
