@@ -26,14 +26,12 @@ font-size: 20px;
 .aac, .acx, #siguiente{
     text-align: center;
 }
-.caja{
-    width: 520px;
-    height: 100px; 
-    margin-left: 20px;
-}
 .preguntas{
     margin-left: 10px;
 }
-.preguntas:hover{
+/* .preguntas:hover{
     font-size:25px;
+} */
+.radio{
+    margin-left: 50px;
 }
