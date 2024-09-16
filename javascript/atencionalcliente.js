@@ -21,7 +21,7 @@ const phrases = [
 let currentPhraseIndex = 0;
 let fontSize = 15;
 let timer;
-const countdownTime = 10; // Tiempo en segundos para el temporizador
+const countdownTime = 5; // Tiempo en segundos para el temporizador
 
 const phraseElement = document.getElementById('phrase');
 const inputElement = document.getElementById('input');
