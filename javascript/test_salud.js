@@ -1,14 +1,15 @@
 const phrases = [
-    "las hamburguesas son mas ricas con cheddar",
-    "lleva la inteligencia en la sangre pero falta que circule",
-    "los ñoquis se comen todos los 29 de cada mes",
-    "las mascotas son espectaculadores"
+    "arteriosclerosis",
+    "parangutirimicuaro",
+    "electrocardiograma",
+    "electroencefalografista",
+    "caleidoscopio"
 ];
 
 let currentPhraseIndex = 0;
-let fontSize = 10;
+let fontSize = 8;
 let timer;
-const countdownTime = 10; // Tiempo en segundos para el temporizador
+const countdownTime = 3; // Tiempo en segundos para el temporizador
 
 const phraseElement = document.getElementById('phrase');
 const inputElement = document.getElementById('input');
@@ -31,6 +32,8 @@ function displayPhrase() {
         inputElement.style.display = 'none';
         submitButton.style.display = 'none';
         timerElement.textContent = '';
+
+        window.location.href = './pages/generadorCertificado.html';
     }
 }
 
@@ -45,7 +48,7 @@ function startCountdown() {
         if (timeLeft <= 0) {
             clearInterval(timer);
             currentPhraseIndex++;
-            fontSize += 5; // Aumenta el tamaño de la fuente
+            fontSize += 3; // Aumenta el tamaño de la fuente
             displayPhrase();
         }
     }, 1000); // Actualiza cada segundo

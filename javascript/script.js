@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         alert('Formulario enviado con éxito');
         form.reset();
-        window.location.href = './pages/generadorCertificado.html';
+        window.location.href = './pages/test_salud.html';
     });
 });
