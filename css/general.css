@@ -1,14 +1,10 @@
 #navColor {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
     font-weight: bold;
     font-size: 22px;
     padding: 2px;
 }
 #parrafoForm{font-size: 28px;}
-#primerNav{
-    background-color: black;
-}
 
 #imagenInicio{
     font-size: 25px;
@@ -39,4 +35,57 @@ font-size: 20px;
 .error-message {
     color: red;
     font-size: 0.9em;
+}
+
+/* Estilos generales para temas */
+
+/* Tema de color (por defecto) */
+.color-theme {
+    background-color: rgb(48, 98, 114);
+    color: rgb(255, 255, 255);
+}
+
+.color-theme-nav {
+    background-color: #011344; /* Azul */
+    color: white;
+}
+
+.color-theme-form {
+    background-color: white;
+    border-color: #007bff;
+    color: black;
+}
+
+/* Tema claro */
+.claro-theme {
+    background-color: #f8f9fa;
+    color: black;
+}
+
+.claro-theme-nav {
+    background-color: #ced0d3;
+    color: black;
+}
+
+.claro-theme-form {
+    background-color: #ffffff;
+    border-color: #dee2e6;
+    color: black;
+}
+
+/* Tema oscuro */
+.oscuro-theme {
+    background-color: #343a40;
+    color: white;
+}
+
+.oscuro-theme-nav {
+    background-color: #23272b;
+    color: white;
+}
+
+.oscuro-theme-form {
+    background-color: #495057;
+    border-color: #343a40;
+    color: white;
 }

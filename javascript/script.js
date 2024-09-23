@@ -1,6 +1,77 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('formularioInicio');
+    const nav = document.getElementById('primerNav');
 
+    const btnClaro = document.getElementById('claro');
+    const btnOscuro = document.getElementById('oscuro');
+    const btnColor = document.getElementById('color');
+
+    btnClaro.addEventListener('click', () => {
+        document.body.classList.remove('oscuro-theme', 'color-theme');
+        document.body.classList.add('claro-theme');
+
+        nav.classList.remove('oscuro-theme-nav', 'color-theme-nav');
+        nav.classList.add('claro-theme-nav');
+
+        form.classList.remove('oscuro-theme-form', 'color-theme-form');
+        form.classList.add('claro-theme-form');
+
+        increaseFontBtn.classList.remove('btn-outline-light');
+        increaseFontBtn.classList.add('btn-outline-dark');
+        decreaseFontBtn.classList.remove('btn-outline-light');
+        decreaseFontBtn.classList.add('btn-outline-dark');
+    });
+
+    btnOscuro.addEventListener('click', () => {
+        document.body.classList.remove('claro-theme', 'color-theme');
+        document.body.classList.add('oscuro-theme');
+
+        nav.classList.remove('claro-theme-nav', 'color-theme-nav');
+        nav.classList.add('oscuro-theme-nav');
+
+        form.classList.remove('claro-theme-form', 'color-theme-form');
+        form.classList.add('oscuro-theme-form');
+
+        increaseFontBtn.classList.remove('btn-outline-dark');
+        increaseFontBtn.classList.add('btn-outline-light');
+        decreaseFontBtn.classList.remove('btn-outline-dark');
+        decreaseFontBtn.classList.add('btn-outline-light');
+    });
+
+    btnColor.addEventListener('click', () => {
+        document.body.classList.remove('claro-theme', 'oscuro-theme');
+        document.body.classList.add('color-theme');
+
+        nav.classList.remove('claro-theme-nav', 'oscuro-theme-nav');
+        nav.classList.add('color-theme-nav');
+
+        form.classList.remove('claro-theme-form', 'oscuro-theme-form');
+        form.classList.add('color-theme-form');
+
+        increaseFontBtn.classList.remove('btn-outline-dark');
+        increaseFontBtn.classList.add('btn-outline-light');
+        decreaseFontBtn.classList.remove('btn-outline-dark');
+        decreaseFontBtn.classList.add('btn-outline-light');
+    });
+
+    // Control de tamaño de letra
+    const increaseFontBtn = document.getElementById('increaseFont');
+    const decreaseFontBtn = document.getElementById('decreaseFont');
+
+    let currentFontSize = 16; // Tamaño base
+
+    increaseFontBtn.addEventListener('click', () => {
+        currentFontSize += 1;
+        document.body.style.fontSize = `${currentFontSize}px`;
+    });
+
+    decreaseFontBtn.addEventListener('click', () => {
+        if (currentFontSize > 12) { // Limitar tamaño mínimo de fuente
+            currentFontSize -= 1;
+            document.body.style.fontSize = `${currentFontSize}px`;
+        }
+    });
+    
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
