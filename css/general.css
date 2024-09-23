@@ -35,3 +35,8 @@ font-size: 20px;
 .radio{
     margin-left: 50px;
 }
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+}
