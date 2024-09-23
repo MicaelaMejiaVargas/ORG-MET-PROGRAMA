@@ -3,79 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de Frases y Colores</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Test Obligatorio de Salud</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        #phrase {
-            text-align: center;
-            margin: 20px 0;
+        #colorContainer, #scoreContainer {
+            display: none; /* Ocultar al inicio */
         }
         #colorBox {
             width: 100px;
             height: 100px;
             margin: 20px auto;
+            border: 1px solid #000;
         }
-        #options button {
-            width: 100%;
+        .navbar {
+            background-color: #007bff; /* Color de fondo de la barra de navegación */
         }
-        #scoreContainer {
-            display: none;
-        }
-        #colorContainer {
-            display: none;
+        .navbar-brand {
+            color: #fff; /* Color del texto */
         }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg" style="background-color: #007bff;">
-        <a class="navbar-brand" href="#" style="color: white;">Test Obligatorio de Salud</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Test Obligatorio de Salud</a>
     </nav>
-    
-    <div id="globalTimer">Tiempo transcurrido: 0h 0m 0s</div>
-    <div id="timer">Preparado para comenzar...</div>
 
-
-    <div class="container mt-5">
-        <p class="h1">FASE 1 - ESCRIBA LA PALABRA TAL CUAL LA VE</p>
-        <div id="phrase" class="display-4"></div>
-        <input id="input" type="text" class="form-control" placeholder="Escribe la frase aquí">
-        <div class="text-center mt-2">
-            <button id="submit" class="btn btn-primary btn-lg" style="width: 200px;">Enviar</button>
+    <div class="container mt-4">
+        <div id="phraseContainer" class="text-center">
+            <h2>Fase 1: Frases</h2>
+            <p id="phrase" class="display-4"></p>
+            <input type="text" id="input" class="form-control" placeholder="Escribe la frase aquí">
+            <button id="submit" class="btn btn-primary mt-2">Enviar</button>
+            <div id="message" class="mt-2"></div>
+            <div id="timer" class="mt-2">Siguiente frase en: 3 segundos...</div>
         </div>
-        <div id="message" class="mt-3"></div>
-        <div id="timer" class="mt-3"></div>
-        
-        <div id="scoreContainer" class="mt-4">
-            <h5>Resultados</h5>
+
+        <div id="colorContainer" class="text-center">
+            <h2>Fase 2: Colores</h2>
+            <div id="colorBox"></div>
+            <div id="options">
+                <button id="option1" class="btn btn-secondary m-2"></button>
+                <button id="option2" class="btn btn-secondary m-2"></button>
+                <button id="option3" class="btn btn-secondary m-2"></button>
+            </div>
+            <div id="messageColor" class="mt-2"></div>
+        </div>
+
+        <div id="scoreContainer" class="text-center">
+            <h2>Resultados</h2>
             <p>Respuestas correctas: <span id="correctAnswers">0</span></p>
             <p>Respuestas incorrectas: <span id="incorrectAnswers">0</span></p>
-            <div id="globalTimer" class="mt-3"></div>
         </div>
 
-        <div id="colorContainer" class="text-center mt-5">
-            
-        <p class="h1">FASE 2 - ¿DE QUÉ COLOR ES EL CUADRO? SELECCIONE UNA OPCIÓN</p>
-            <div id="colorBox"></div>
-            <div id="options" class="btn-group-vertical">
-                <button id="option1" class="btn btn-secondary mt-2"></button>
-                <button id="option2" class="btn btn-secondary mt-2"></button>
-                <button id="option3" class="btn btn-secondary mt-2"></button>
-                <br><br><br>
-            </div>
+        <div id="finalScoreContainer" class="text-center" style="display: none;">
+            <h2>¡Has completado el test!</h2>
+            <p>Respuestas correctas: <span id="finalCorrectAnswers">0</span></p>
+            <p>Respuestas incorrectas: <span id="finalIncorrectAnswers">0</span></p>
+            <p>Tiempo total: <span id="finalTime">0h 0m 0s</span></p>
+            <button id="redirectButton" class="btn btn-primary mt-2">Terminar. Comenzar con la capacitación</button>
         </div>
+        
+
+
+        <div id="globalTimer" class="text-center mt-3">Tiempo transcurrido: 0h 0m 0s</div>
     </div>
 
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../javascript/test_salud.js"></script>
 </body>
 </html>
