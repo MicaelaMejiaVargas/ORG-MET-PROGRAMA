@@ -3,19 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Transcripción</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
-    <link rel="stylesheet" href="../css/test_salud.css">
+    <title>Test Obligatorio de Salud</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #colorContainer, #scoreContainer {
+            display: none; /* Ocultar al inicio */
+        }
+        #colorBox {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            border: 1px solid #000;
+        }
+        .navbar {
+            background-color: #007bff; /* Color de fondo de la barra de navegación */
+        }
+        .navbar-brand {
+            color: #fff; /* Color del texto */
+        }
+    </style>
 </head>
 <body>
-    <div id="container">
-        <p class="h1">Módulo 1 - Escribe la frase de abajo</p>
-        <p id="phrase"></p>
-        <input type="text" id="input" placeholder="Escribe aquí..." autofocus>
-        <button id="submit">Verificar</button>
-        <p id="message"></p>
+
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Test Obligatorio de Salud</a>
+    </nav>
+
+    <div class="container mt-4">
+        <div id="phraseContainer" class="text-center">
+            <h2>Fase 1: ESCRIBE LA PALABRA TAL CUAL LA VE</h2>
+            <p id="phrase" class="display-4"></p>
+            <input type="text" id="input" class="form-control" placeholder="Escribe la frase aquí">
+            <button id="submit" class="btn btn-primary mt-2">Enviar</button>
+            <div id="message" class="mt-2"></div>
+            <div id="timer" class="mt-2">Siguiente frase en: 3 segundos...</div>
+        </div>
+
+        <div id="colorContainer" class="text-center">
+            <h2>Fase 2: ¿QUÉ COLOR VES? SELECCIONA UNA OPCIÓN</h2>
+            <div id="colorBox"></div>
+            <div id="options">
+                <button id="option1" class="btn btn-secondary m-2"></button>
+                <button id="option2" class="btn btn-secondary m-2"></button>
+                <button id="option3" class="btn btn-secondary m-2"></button>
+            </div>
+            <div id="messageColor" class="mt-2"></div>
+        </div>
+
+        <div id="scoreContainer" class="text-center">
+            <h2>RESULTADOS</h2>
+            <p>Respuestas correctas: <span id="correctAnswers">0</span></p>
+            <p>Respuestas incorrectas: <span id="incorrectAnswers">0</span></p>
+        </div>
+
+        <div id="finalScoreContainer" class="text-center" style="display: none;">
+            <h2>¡HAS COMPLETADO EL TEST ObLIGATORIO!</h2>
+            <p>Respuestas correctas: <span id="finalCorrectAnswers">0</span></p>
+            <p>Respuestas incorrectas: <span id="finalIncorrectAnswers">0</span></p>
+            <p>Tiempo total: <span id="finalTime">0h 0m 0s</span></p>
+            <button id="redirectButton" class="btn btn-primary mt-2">Terminé. Comencemos con la capacitación</button>
+        </div>
+
+        <div id="globalTimer" class="text-center mt-3">Tiempo transcurrido: 0h 0m 0s</div>
     </div>
+
     <script src="../javascript/test_salud.js"></script>
 </body>
 </html>
