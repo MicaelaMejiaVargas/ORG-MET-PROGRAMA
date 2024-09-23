@@ -55,6 +55,13 @@ function displayPhrase() {
         submitButton.disabled = false; // Habilitar el botón al mostrar nueva frase
     } else {
         startColorPhase();
+        phraseElement.textContent = '¡Has completado todas las frases!';
+        phraseElement.style.fontSize = '20px';
+        inputElement.style.display = 'none';
+        submitButton.style.display = 'none';
+        timerElement.textContent = '';
+
+        window.location.href = './eleccionRubro.html';
     }
 }
 

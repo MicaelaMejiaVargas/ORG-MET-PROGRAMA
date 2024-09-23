@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/general.css">
     <title>CASOMI S.A</title>
 </head>
-<body>
-    <nav class="p-3" id="primerNav">
+<body class="color-theme">
+    <nav class="p-3 color-theme-nav" id="primerNav">
         <div class="container-fluid">
             <a id="navColor" class="navbar-brand" href="inicio.html">
                 <img src="img/empresa_logo.png" alt="Logo" width="45" height="35" class="d-inline-block">
@@ -17,21 +17,46 @@
         </div>
     </nav>
 
-    <form id="formularioInicio" class="card border mb-3" style="max-width: 40rem; margin: auto; margin-top: 90px;" method="POST">
-        <div id="parrafoForm" class="card-header">¡Bienvenido a la capacitación online!</div>
-        <div class="card-body">
-            <label for="nombre">Ingrese su nombre</label>
-            <input class="inputs input-group-text" id="nombre" name="nombre" required></input>
-            <label for="apellido">Ingrese su apellido</label>
-            <input class="inputs input-group-text" id="apellido" name="apellido" required></input>
-            <label for="dni">Ingrese su DNI</label>
-            <input class="inputs input-group-text" id="dni" name="dni" required></input>
-            <p class="card-text text-center">(Los datos requeridos son para la realización del certificado)</p>
-            <div class="d-grid gap-2">
-                <button class="btn btn-primary" type="submit">Enviar</button>
-            </div>
+    <div class="container-fluid d-flex flex-column flex-md-row justify-content-center" style="margin-top: 90px;">
+        <!-- Sección de selección de temas -->
+        <div class="mb-3 me-md-5" id="temasSection">
+            <h5>Temas:</h5>
+            <button id="claro" class="btn btn-light mb-2">Claro</button>
+            <button id="oscuro" class="btn btn-dark mb-2">Oscuro</button>
+            <button id="color" class="btn btn-primary mb-2">Color</button>
         </div>
-    </form>
+
+        <!-- Formulario centrado -->
+        <form id="formularioInicio" class="card border mb-3 color-theme-form" style="max-width: 40rem;" method="POST">
+            <div id="parrafoForm" class="card-header">¡Bienvenido a la capacitación online!</div>
+            <div class="card-body">
+                <label for="nombre">Ingrese su nombre</label>
+                <input class="inputs input-group-text" id="nombre" name="nombre" required>
+                <span class="error-message" id="error-nombre"></span>
+
+                <label for="apellido">Ingrese su apellido</label>
+                <input class="inputs input-group-text" id="apellido" name="apellido" required>
+                <span class="error-message" id="error-apellido"></span>
+
+                <label for="dni">Ingrese su DNI</label>
+                <input class="inputs input-group-text" id="dni" name="dni" type="number" required>
+                <span class="error-message" id="error-dni"></span>
+
+                <p class="card-text text-center">(Los datos requeridos son para la realización del certificado)</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Sección de tamaño de letra -->
+        <div class="ms-md-5" id="fontSizeSection">
+            <h5>Tamaño de Letra:</h5>
+            <button id="increaseFont" class="btn btn-outline-light mb-2">+</button>
+            <button id="decreaseFont" class="btn btn-outline-light mb-2">-</button>
+        </div>
+    </div>
+
     <script src="./javascript/script.js"></script>
 </body>
 </html>
