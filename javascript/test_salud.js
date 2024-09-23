@@ -52,6 +52,7 @@ function displayPhrase() {
         inputElement.value = '';
         messageElement.textContent = '';
         timerElement.textContent = '';
+        submitButton.disabled = false; // Habilitar el botón al mostrar nueva frase
     } else {
         startColorPhase();
     }
@@ -89,10 +90,9 @@ submitButton.addEventListener('click', () => {
     }
 
     updateScore();
+    submitButton.disabled = true; // Deshabilitar el botón después de enviar
     startCountdown();
 });
-
-displayPhrase();
 
 // Fase 2: Colores
 const colors = [
@@ -134,10 +134,12 @@ function displayColor() {
         // Muestra el color actual en la caja
         colorBox.style.backgroundColor = currentColor.hex;
 
-        // Genera opciones, mezclando la correcta con otras dos opciones aleatorias
-        const shuffledColors = shuffleArray([...colors]);
-        const options = [currentColor, shuffledColors[0], shuffledColors[1]];
-        shuffleArray(options);
+        // Selecciona dos colores incorrectos, asegurándose de que no se repita el color correcto
+        const incorrectColors = colors.filter(color => color.colorName !== currentColor.colorName);
+        const shuffledIncorrectColors = shuffleArray(incorrectColors).slice(0, 2);
+
+        // Genera las opciones mezclando el color correcto con los dos incorrectos
+        const options = shuffleArray([currentColor, ...shuffledIncorrectColors]);
 
         // Habilitar opciones de nuevo
         optionElements.forEach((element) => {
@@ -218,7 +220,7 @@ function showFinalScore() {
         <p>Respuestas correctas: ${correctCount}</p>
         <p>Respuestas incorrectas: ${incorrectCount}</p>
         <p>Tiempo total: ${hours}h ${minutes}m ${seconds}s</p>
-        <button id="redirectButton">Ir a la siguiente página</button>
+        <button id="redirectButton">Termine. Comenzar con la capacitación</button>
     `;
     document.body.appendChild(resultElement);
 

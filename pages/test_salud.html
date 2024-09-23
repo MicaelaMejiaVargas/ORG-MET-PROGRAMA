@@ -3,106 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frases y Colores</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <title>Test de Frases y Colores</title>
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .container {
-            margin-top: 50px;
-            text-align: center;
-            max-width: 600px;
-        }
-        #phrase {
-            font-size: 24px;
-            font-weight: bold;
-            color: #343a40;
-        }
-        #input {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-        #colorBox {
-            width: 150px;
-            height: 150px;
-            margin: 20px auto;
-            border: 2px solid #343a40;
-        }
-        .option {
-            margin: 10px;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .option:hover {
-            background-color: #e9ecef;
-        }
-        #message {
-            font-size: 18px;
-            margin-top: 20px;
-        }
-        .btn-custom {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-        }
-        .btn-custom:hover {
-            background-color: #0056b3;
-        }
         .disabled-option {
+            opacity: 0.5;
             pointer-events: none;
-            background-color: #ccc !important;
         }
     </style>
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">TEST DE SALUD OBLIGATORIO</a>
-    </div>
-</nav>
-
-<div id="globalTimer">Tiempo transcurrido: 0h 0m 0s</div>
-
-<div class="container">
     <!-- Fase 1: Frases -->
-    <div id="phraseContainer" class="mb-4">
+    <div id="phraseContainer">
         <h1 id="phrase"></h1>
-        <input type="text" id="input" class="form-control" placeholder="Escribe la frase">
-        <button id="submit" class="btn btn-custom mt-3">Enviar</button>
+        <input type="text" id="input" placeholder="Escribe la frase aquí">
+        <button id="submit">Enviar</button>
+        <p id="message"></p>
+        <p id="timer"></p>
     </div>
-    
-    <!-- Mensajes y temporizador -->
-    <p id="message" class="text-center"></p>
-    <p id="timer" class="text-center"></p>
 
     <!-- Fase 2: Colores -->
     <div id="colorContainer" style="display: none;">
-        <div id="colorBox" class="shadow-sm"></div>
-        <div id="options" class="d-flex justify-content-around">
-            <div class="option shadow-sm" id="option1"></div>
-            <div class="option shadow-sm" id="option2"></div>
-            <div class="option shadow-sm" id="option3"></div>
+        <div id="colorBox" style="width: 100px; height: 100px; background-color: #000;"></div>
+        <div id="options">
+            <button id="option1"></button>
+            <button id="option2"></button>
+            <button id="option3"></button>
         </div>
     </div>
 
-    <!-- Contador de respuestas correctas e incorrectas -->
-    <div id="scoreContainer" class="mt-4" style="display: none;">
-        <p><strong>Correctas:</strong> <span id="correctAnswers">0</span></p>
-        <p><strong>Incorrectas:</strong> <span id="incorrectAnswers">0</span></p>
+    <!-- Puntaje -->
+    <div id="scoreContainer" style="display: none;">
+        <p>Respuestas correctas: <span id="correctAnswers">0</span></p>
+        <p>Respuestas incorrectas: <span id="incorrectAnswers">0</span></p>
     </div>
-</div>
+
+    <!-- Temporizador global -->
+    <p id="globalTimer"></p>
 
 <!-- Bootstrap JS and dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
