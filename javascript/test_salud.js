@@ -51,7 +51,7 @@ function displayPhrase() {
         phraseElement.style.fontSize = `${fontSize}px`;
         inputElement.value = '';
         messageElement.textContent = '';
-        timerElement.textContent = '';
+        timerElement.textContent = ''; // Aquí se limpia el temporizador al mostrar nueva frase
         submitButton.disabled = false; // Habilitar el botón al mostrar nueva frase
     } else {
         startColorPhase();
@@ -231,8 +231,9 @@ function showFinalScore() {
     });
 }
 
-// Iniciar el temporizador global al cargar la página
+// Iniciar el temporizador global y el temporizador inicial al cargar la página
 window.onload = () => {
     startGlobalTimer();
+    timerElement.textContent = 'Preparado para comenzar...'; // Mensaje inicial para el temporizador
     displayPhrase();
 };
