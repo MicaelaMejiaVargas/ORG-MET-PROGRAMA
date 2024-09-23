@@ -213,7 +213,7 @@ function showFinalScore() {
     // Agregar evento al botón de redirección
     const redirectButton = document.getElementById('redirectButton');
     redirectButton.addEventListener('click', () => {
-        window.location.href = 'tu_nueva_direccion.html'; // Cambia esto por la URL deseada
+        window.location.href = './eleccionRubro.html'; // Cambia esto por la URL deseada
     });
 }
 
