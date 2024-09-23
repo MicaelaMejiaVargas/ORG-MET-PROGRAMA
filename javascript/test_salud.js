@@ -33,7 +33,7 @@ function displayPhrase() {
         submitButton.style.display = 'none';
         timerElement.textContent = '';
 
-        window.location.href = './pages/generadorCertificado.html';
+        window.location.href = './eleccionRubro.html';
     }
 }
 
