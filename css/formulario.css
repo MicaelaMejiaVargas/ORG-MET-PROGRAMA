@@ -1,0 +1,67 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.preguntas, .opciones {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-left: 10px;
+}
+
+.oculto {
+    display: none;
+}
+
+.container-pregunta {
+    margin-bottom: 15px;
+    transition: margin-bottom 0.3s ease;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    margin-left: 50px;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.btn-primary:hover {
+    background-color: #004085;
+}
+
+.select-css {
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+#primerNav {
+    background-color: black;
+}
+
+#navColor {
+    font-family: Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 2px;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade.show {
+    opacity: 1;
+}
